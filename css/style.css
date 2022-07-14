@@ -562,7 +562,7 @@
 }
 .nav-left ul.sub {
   transition: height 0.3s, border-top 0.3s;
-  border-left: solid 2px #f00;
+  border-left: solid 4px #7c9eff;
   overflow-y: hidden;
 }
 .nav-left ul.sub.hide {
@@ -967,7 +967,7 @@
   left: 12px;
   z-index: 1;
   font-size: 18px;
-  color: #309e85;
+  color: #424242;
 }
 .nav-right .title-list nav a#top:before,
 .nav-right .title-list #local-search-result a#top:before {
@@ -1674,13 +1674,13 @@ h2 {
   width: 20px;
   height: 40px;
   border-radius: 0 100px 100px 0;
-  background-color: #42b983;
+  background-color: #c0c0c0;
   cursor: pointer;
   margin-left: -20px;
   transition: margin-left 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }
 .hide-list .semicircle .brackets {
-  color: #fff;
+  color: 424242;
   padding-top: 12px;
   padding-left: 4px;
   font-weight: bolder;

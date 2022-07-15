@@ -1476,6 +1476,12 @@
   border: 1px solid #009688;
   background-color: #009688;
 }
+#post .pjax article table.grey_title tr th {
+  color: #eee;
+  border: 1px solid #767978;
+  background-color: #767978;
+  text-align: center;
+}
 #post .pjax article :not(pre) > code {
   background-color: #fff5f5;
   color: #ff502c;

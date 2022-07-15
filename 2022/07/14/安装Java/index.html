@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>📂Go Module | 翻滚的鱼</title>
-  <meta name="keywords" content=" 语言 , Go ">
-  <meta name="description" content="📂Go Module | 翻滚的鱼">
+  <title>📂安装Java | 翻滚的鱼</title>
+  <meta name="keywords" content=" 语言 , Java ">
+  <meta name="description" content="📂安装Java | 翻滚的鱼">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="[toc]   要做java开发的话，我们只需要安装JDK（Java Development Kit）；如果只需要运行java程序，只需要安装JRE（Java Runtime Environment）。       JVM：Java Virtual Machine  它是整个java实现跨平台的最核心的部分，所有的java程序会首先被编译为.class的类文件，这种类文件可以在虚拟机上执行，也就是">
 <meta property="og:type" content="article">
@@ -326,9 +326,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-Go-Module" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-安装Java" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">📂Go Module</h1>
+        <h1 class="article-title">📂安装Java</h1>
     
     <div class="article-meta">
         
@@ -342,7 +342,7 @@
             
             <a  data-rel="语言">语言</a> > 
             
-            <a  data-rel="语言&lt;---&gt;Go">Go</a>
+            <a  data-rel="语言&lt;---&gt;Java">Java</a>
             
         </span>
         
@@ -352,19 +352,19 @@
             
             <a class="color3">语言</a>
             
-            <a class="color3">Go</a>
+            <a class="color5">Java</a>
             
         </span>
         
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-07-14 22:26:13'>2022-07-14 21:19</time>
+            发布时间 : <time class="date" title='最后更新: 2022-07-14 22:40:47'>2022-07-14 22:24</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:1.9k</span>
+        <span>字数:982</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -394,7 +394,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFModules%EF%BC%9F"><span class="toc-text">1. 如何开启Modules？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-GO111MODULE"><span class="toc-text">1.1. GO111MODULE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-GOPROXY"><span class="toc-text">1.2. GOPROXY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%BD%BF%E7%94%A8go-get%E5%91%BD%E4%BB%A4%E4%B8%8B%E8%BD%BD%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC%E7%9A%84%E4%BE%9D%E8%B5%96%E5%8C%85"><span class="toc-text">1.3. 使用go get命令下载指定版本的依赖包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A6%82%E4%BD%95%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8Modules%EF%BC%9F"><span class="toc-text">2. 如何在项目中使用Modules？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%A4%BA%E4%BE%8B1"><span class="toc-text">2.1. 示例1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E7%A4%BA%E4%BE%8B2"><span class="toc-text">2.2. 示例2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8-replace-%E6%9B%BF%E6%8D%A2%E6%97%A0%E6%B3%95%E7%9B%B4%E6%8E%A5%E8%8E%B7%E5%8F%96%E7%9A%84-package"><span class="toc-text">3. 使用 replace 替换无法直接获取的 package</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E5%8F%82%E8%80%83"><span class="toc-text">本文部分内容参考</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85JDK%EF%BC%88Java-Development-Kit%EF%BC%89"><span class="toc-text">1. 安装JDK（Java Development Kit）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Java-Runtime-Environment"><span class="toc-text">2. Java Runtime Environment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8D%B8%E8%BD%BDJava"><span class="toc-text">3. 卸载Java</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BD%BF%E7%94%A8%E7%BB%88%E7%AB%AF%E5%8D%B8%E8%BD%BD-Oracle-Java"><span class="toc-text">3.1. 使用终端卸载 Oracle Java</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E5%8F%82%E8%80%83"><span class="toc-text">本文部分内容参考</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -410,241 +410,71 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%A6%82%E4%BD%95%E5%BC%80%E5%90%AFModules%EF%BC%9F"><span class="toc-text">1. 如何开启Modules？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-GO111MODULE"><span class="toc-text">1.1. GO111MODULE</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-2-GOPROXY"><span class="toc-text">1.2. GOPROXY</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#1-3-%E4%BD%BF%E7%94%A8go-get%E5%91%BD%E4%BB%A4%E4%B8%8B%E8%BD%BD%E6%8C%87%E5%AE%9A%E7%89%88%E6%9C%AC%E7%9A%84%E4%BE%9D%E8%B5%96%E5%8C%85"><span class="toc-text">1.3. 使用go get命令下载指定版本的依赖包</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E5%A6%82%E4%BD%95%E5%9C%A8%E9%A1%B9%E7%9B%AE%E4%B8%AD%E4%BD%BF%E7%94%A8Modules%EF%BC%9F"><span class="toc-text">2. 如何在项目中使用Modules？</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#2-1-%E7%A4%BA%E4%BE%8B1"><span class="toc-text">2.1. 示例1</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-2-%E7%A4%BA%E4%BE%8B2"><span class="toc-text">2.2. 示例2</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E4%BD%BF%E7%94%A8-replace-%E6%9B%BF%E6%8D%A2%E6%97%A0%E6%B3%95%E7%9B%B4%E6%8E%A5%E8%8E%B7%E5%8F%96%E7%9A%84-package"><span class="toc-text">3. 使用 replace 替换无法直接获取的 package</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E5%8F%82%E8%80%83"><span class="toc-text">本文部分内容参考</span></a></li></ol></div>  </p>
-<p>最早的时候，Go语言所依赖的所有的第三方库都放在 GOPATH 这个目录下面，这就导致了同一个库只能保存一个版本的代码。如果不同的项目依赖同一个第三方的库的不同版本，应该怎么解决？</p>
-<p>go module 是Go语言从 1.11 版本之后官方推出的版本管理工具，并且从 Go1.13 版本开始，go module 成为了Go语言默认的依赖管理工具。</p>
-<p>Modules 官方定义为：</p>
-<blockquote>
-<p>Modules 是相关 Go 包的集合，是源代码交换和版本控制的单元。Go语言命令直接支持使用 Modules，包括记录和解析对其他模块的依赖性，Modules 替换旧的基于 GOPATH 的方法，来指定使用哪些源文件。  </p>
-</blockquote>
-<h2 id="1-如何开启Modules？"><a href="#1-如何开启Modules？" class="headerlink" title="1. 如何开启Modules？"></a>1. 如何开启Modules？</h2><ol>
-<li>首先需要把 golang 升级到 1.11 版本以上。</li>
-<li>设置<code>GO111MODULE</code>。</li>
-</ol>
-<h3 id="1-1-GO111MODULE"><a href="#1-1-GO111MODULE" class="headerlink" title="1.1. GO111MODULE"></a>1.1. GO111MODULE</h3><p>在Go语言 1.12 版本之前，要启用 go module 工具首先要设置环境变量 GO111MODULE，不过在Go语言 1.13 及以后的版本则不再需要设置环境变量。通过 GO111MODULE 可以开启或关闭 go module 工具。  </p>
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%AE%89%E8%A3%85JDK%EF%BC%88Java-Development-Kit%EF%BC%89"><span class="toc-text">1. 安装JDK（Java Development Kit）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Java-Runtime-Environment"><span class="toc-text">2. Java Runtime Environment</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E5%8D%B8%E8%BD%BDJava"><span class="toc-text">3. 卸载Java</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#3-1-%E4%BD%BF%E7%94%A8%E7%BB%88%E7%AB%AF%E5%8D%B8%E8%BD%BD-Oracle-Java"><span class="toc-text">3.1. 使用终端卸载 Oracle Java</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E5%8F%82%E8%80%83"><span class="toc-text">本文部分内容参考</span></a></li></ol></div>  </p>
+<p>要做java开发的话，我们只需要安装JDK（Java Development Kit）；如果只需要运行java程序，只需要安装JRE（Java Runtime Environment）。  </p>
+<p><img src="/../imgs/java/001-Java%E7%8E%AF%E5%A2%83%E6%80%BB%E8%A7%88%E5%9B%BE.png" alt="Java环境总览图">  </p>
 <ul>
-<li><code>GO111MODULE=off</code>禁用 go module，编译时会从<code>GOPATH</code>和 vendor 文件夹中查找包；</li>
-<li><code>GO111MODULE=on</code>启用 go module，编译时会忽略<code>GOPATH</code>和 vendor 文件夹，只根据 go.mod下载依赖；</li>
-<li><code>GO111MODULE=auto</code>（默认值），当项目在<code>GOPATH/src</code>目录之外，并且项目根目录有<code>go.mod</code>文件时，开启go module。</li>
+<li><p>JVM：Java Virtual Machine</p>
+<ul>
+<li>它是整个java<strong>实现跨平台</strong>的最核心的部分，所有的java程序会首先被编译为<code>.class</code>的类文件，这种类文件可以在虚拟机上执行，也就是说<code>.class</code>并不直接与机器的操作系统相对应，而是经过虚拟机间接与操作系统交互，由虚拟机将程序解释给本地系统执行</li>
+<li>Java和C++都是高级语言，两者之间最大的区别就是C++底层直接调用操作系统运行硬件，而Java是在操作系统之上加了一层JVM，也就是硬件之上的一层，所以一般来说C++性能更好</li>
 </ul>
-<p>Windows 下开启 GO111MODULE 的命令为：  </p>
-<pre><code class="bash">set GO111MODULE=on
-# 或者：
-set GO111MODULE=auto
-</code></pre>
-<p>MacOS 或者 Linux 下开启 GO111MODULE 的命令为：</p>
-<pre><code class="bash">export GO111MODULE=on 
-# 或者:
-export GO111MODULE=auto
-</code></pre>
-<p>在开启<code>GO111MODULE</code>之后就可以使用go module工具了，也就是说在以后的开发中就没有必要在<code>GOPATH</code>中创建项目了，并且还能够很好的管理项目依赖的第三方包信息。</p>
-<p>常用的go mod命令如下表所示： </p>
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>go mod download</td>
-<td>下载依赖包到本地（默认为 GOPATH&#x2F;pkg&#x2F;mod目录）</td>
-</tr>
-<tr>
-<td>go mod edit</td>
-<td>编辑 go.mod 文件</td>
-</tr>
-<tr>
-<td>go mod graph</td>
-<td>打印模块依赖图</td>
-</tr>
-<tr>
-<td>go mod init</td>
-<td>初始化当前文件夹，创建 go.mod 文件</td>
-</tr>
-<tr>
-<td>go mod tidy</td>
-<td>增加缺少的包，删除无用的包</td>
-</tr>
-<tr>
-<td>go mod vendor</td>
-<td>将依赖复制到 vendor 目录下</td>
-</tr>
-<tr>
-<td>go mod verify</td>
-<td>校验依赖</td>
-</tr>
-<tr>
-<td>go mod why</td>
-<td>解释为什么需要依赖</td>
-</tr>
-</tbody></table>
-<h3 id="1-2-GOPROXY"><a href="#1-2-GOPROXY" class="headerlink" title="1.2. GOPROXY"></a>1.2. GOPROXY</h3><p>proxy 顾名思义就是代理服务器的意思。大家都知道，国内的网络有防火墙的存在，这导致有些Go语言的第三方包我们无法直接通过<code>go get</code>命令获取。<code>GOPROXY</code>是Go语言官方提供的一种通过中间代理商来为用户提供包下载服务的方式。要使用<code>GOPROXY</code>只需要设置环境变量<code>GOPROXY</code>即可。</p>
-<p>目前公开的代理服务器的地址有：</p>
-<ul>
-<li>goproxy.io；</li>
-<li>goproxy.cn：（推荐）由国内的七牛云提供。</li>
-</ul>
-<p>Windows 下设置 GOPROXY 的命令为：  </p>
-<pre><code class="bash">go env -w GOPROXY=https://goproxy.cn,direct
-</code></pre>
-<p>MacOS 或 Linux 下设置 GOPROXY 的命令为：  </p>
-<pre><code class="bash">export GOPROXY=https://goproxy.cn
-</code></pre>
-<p>Go语言在 1.13 版本之后 GOPROXY 默认值为：<a target="_blank" rel="noopener" href="https://proxy.golang.org/">https://proxy.golang.org</a></p>
-<p>在国内可能会存在下载慢或者无法访问的情况，所以十分建议大家将<code>GOPROXY</code> 设置为国内的<code>goproxy.cn</code>。  </p>
-<h3 id="1-3-使用go-get命令下载指定版本的依赖包"><a href="#1-3-使用go-get命令下载指定版本的依赖包" class="headerlink" title="1.3. 使用go get命令下载指定版本的依赖包"></a>1.3. 使用go get命令下载指定版本的依赖包</h3><p>执行go get 命令，在下载依赖包的同时还可以指定依赖包的版本。</p>
-<ul>
-<li>运行go get -u命令会将项目中的包升级到最新的次要版本或者修订版本；</li>
-<li>运行go get -u&#x3D;patch命令会将项目中的包升级到最新的修订版本；</li>
-<li>运行go get [包名]@[版本号]命令会下载对应包的指定版本或者将对应包升级到指定的版本。</li>
-</ul>
-<p>❗️<strong>提示</strong>：</p>
-<ul>
-<li><code>go get [包名]@[版本号]</code>命令中版本号可以是<code>x.y.z</code>的形式，例如： <pre><code class="bash">go get foo@v1.2.3
-</code></pre>
 </li>
-<li>也可以是 git 上的分支或 tag，例如：<pre><code class="bash">go get foo@master
-</code></pre>
-</li>
-<li>还可以是 git 提交时的哈希值，例如：<pre><code class="bash">go get foo@e3702bed2
-</code></pre>
+<li><p>JRE：Java Runtime Environment</p>
+<ul>
+<li>Java程序的运行环境，它最核心的内容就是JVM及核心类库</li>
+<li>光有JVM还不能执行<code>.class</code>，因为在解释<code>.class</code>的时候，JVM需要调用解释所需要的类库<code>lib</code>。在JDK的安装目录里你可以找到<code>jre</code>目录，里面有两个文件夹：<code>bin</code>和<code>lib</code>。<ul>
+<li>在这里可以认为<code>bin</code>里的就是<code>jvm</code>，<code>lib</code>中则是<code>jvm</code>工作所需要的类库，<code>jvm</code>和<code>lib</code>合起来就称为<code>jre</code>。</li>
+<li>在你写完java程序编译成<code>.class</code>之后，你可以把这个<code>.class</code>文件和<code>jre</code>一起打包发给朋友，这样你的朋友就可以运行你写程序了。（<code>jre</code>里有运行<code>.class</code>的可执行文件<code>java.exe</code>）</li>
+</ul>
 </li>
 </ul>
-<h2 id="2-如何在项目中使用Modules？"><a href="#2-如何在项目中使用Modules？" class="headerlink" title="2. 如何在项目中使用Modules？"></a>2. 如何在项目中使用Modules？</h2><h3 id="2-1-示例1"><a href="#2-1-示例1" class="headerlink" title="2.1. 示例1"></a>2.1. 示例1</h3><p>创建一个新项目：</p>
+</li>
+<li><p>JDK：Java Development Kit</p>
+<ul>
+<li>Java的开发工具，它不仅提供了Java程序运行所需的JRE，还提供了一系列的编译、运行等工具，如<code>javac</code>，<code>java</code>，<code>javaw</code>等</li>
+<li>JDK的安装目录下面有六个文件夹、一个src类库源码压缩包、和其他几个声明文件。其中，真正在运行java时起作用的是以下四个文件夹：<code>bin</code>、<code>include</code>、<code>lib</code>、 <code>jre</code><ul>
+<li><code>bin</code>：最主要的是编译器（<code>javac.exe</code>）</li>
+<li><code>include</code>：java和JVM交互用的头文件</li>
+<li><code>lib</code>：类库</li>
+<li><code>jre</code>：java运行环境（注意：这里的<code>bin</code>、<code>lib</code>文件夹和<code>jre</code>里的<code>bin</code>、<code>lib</code>是不同的）</li>
+</ul>
+</li>
+<li>现在我们可以看出这样一个关系：<strong>JDK包含JRE，而JRE包含JVM</strong></li>
+</ul>
+</li>
+</ul>
+<h2 id="1-安装JDK（Java-Development-Kit）"><a href="#1-安装JDK（Java-Development-Kit）" class="headerlink" title="1. 安装JDK（Java Development Kit）"></a>1. 安装JDK（Java Development Kit）</h2><p>根据网上资料，大家推荐下载的JDK版本为1.8（Java 8），这里下载<code>Java SE Development Kit 8u201</code>：<a target="_blank" rel="noopener" href="https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html">https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html</a>  </p>
+<p>进入链接后，找到对应系统的下载包，按照提示安装JDK（下载前可能需要注册一个Oracle账号）：  </p>
+<p><img src="/../imgs/java/002-MacOS%20JDK%208%20%E5%AE%89%E8%A3%85.png" alt="MacOS JDK 8 安装">  </p>
+<p>安装成功后，对于MacOS，可以在路径： </p>
+<pre><code class="bash">/Library/Java/JavaVirtualMachines
+</code></pre>
+<p>下找到jdk，并能进一步看到前文提到的<code>bin</code>、<code>lib</code>、<code>include</code>、<code>jre</code>文件夹：  </p>
+<p><img src="/../imgs/java/003-MacOS%EF%BC%9Ajdk%E4%BD%8D%E7%BD%AE%E5%92%8C%E4%B8%8B%E9%9D%A2%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9.png" alt="MacOS：jdk位置和下面的文件夹">  </p>
+<p>在终端执行  </p>
+<pre><code class="bash">java -version
+</code></pre>
+<p>可以查看当前的Java版本号： </p>
+<p><img src="/../imgs/java/004-Java%E7%89%88%E6%9C%AC%E5%8F%B7.png" alt="Java版本号">  </p>
+<h2 id="2-Java-Runtime-Environment"><a href="#2-Java-Runtime-Environment" class="headerlink" title="2. Java Runtime Environment"></a>2. Java Runtime Environment</h2><p>如果不需要做开发Java，只想运行Java程序，可以只安装JRE。  </p>
+<p>MacOS的下载地址：<a target="_blank" rel="noopener" href="https://www.java.com/en/download/">https://www.java.com/en/download/</a>  </p>
+<p>点击“Download Java”下载jre：  </p>
+<p><img src="/../imgs/java/005-MacOS%EF%BC%9Ajre%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6.png" alt="MacOS：jre安装文件">  </p>
+<p>双击上图的dmg文件，按照步骤执行就可以安装JRE。</p>
+<h2 id="3-卸载Java"><a href="#3-卸载Java" class="headerlink" title="3. 卸载Java"></a>3. 卸载Java</h2><h3 id="3-1-使用终端卸载-Oracle-Java"><a href="#3-1-使用终端卸载-Oracle-Java" class="headerlink" title="3.1. 使用终端卸载 Oracle Java"></a>3.1. 使用终端卸载 Oracle Java</h3><p>注：要卸载 Java，必须具有管理员权限，并且必须以 root 用户身份或者使用 sudo 工具来执行删除命令。  </p>
+<p>按照下面所示，删除一个目录和一个文件（符号链接）：</p>
 <ol>
-<li><p>初始化生成go.mod<br> 在<code>GOPATH</code>目录之外新建一个目录，并使用<code>go mod init</code>初始化生成<code>go.mod</code>文件。  </p>
-<pre><code class="bash">go mod init hello
+<li>单击位于停靠栏中的 Finder 图标</li>
+<li>单击实用程序文件夹</li>
+<li>双击终端图标</li>
+<li>在“终端”窗口中，复制和粘贴命令：<pre><code class="bash">sudo rm -fr /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin
+sudo rm -fr /Library/PreferencesPanes/JavaControlPanel.prefPane
+sudo rm -fr ~/Library/Application\ Support/Java
 </code></pre>
-<p> 运行结果：<br> <img src="/../imgs/Go/007-go%20mod%20init%20hello%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png" alt="go mod init hello运行结果">  </p>
-<p> go.mod 文件一旦创建后，它的内容将会被 go toolchain 全面掌控，go toolchain 会在各类命令执行时，比如<code>go get</code>、<code>go build</code>、<code>go mod</code>等修改和维护<code>go.mod</code>文件。</p>
-<p> <code>go.mod</code>提供了<code>module</code>、<code>require</code>、<code>replace</code>和<code>exclude</code>四个命令：</p>
-<ul>
-<li>module 语句指定包的名字（路径）；</li>
-<li>require 语句指定的依赖项模块；</li>
-<li>replace 语句可以替换依赖项模块；</li>
-<li>exclude 语句可以忽略依赖项模块。</li>
-</ul>
-<p> 初始化生成的 go.mod 文件如下所示：</p>
-<pre><code class="go">module hello
-
-go 1.18
-</code></pre>
-</li>
-<li><p>添加依赖。<br> 新建一个main.go文件，写入以下代码：  </p>
-<pre><code class="go">package main
-
-import (
-    &quot;net/http&quot;
-    &quot;github.com/labstack/echo&quot;
-)
-
-func main() &#123;
-    e := echo.New()
-    e.GET(&quot;/&quot;, func(c echo.Context) error &#123;
-            return c.String(http.StatusOK, &quot;Hello, World!&quot;)
-        &#125;)
-    e.Logger.Fatal(e.Start(&quot;:1323&quot;))
-&#125;
-</code></pre>
-<p> 执行go run main.go后会显示：  </p>
-<pre><code class="bash">main.go:4:2: no required module provides package github.com/labstack/echo; to add it:
-    go get github.com/labstack/echo
-</code></pre>
-<p> 提示需要下载的依赖为<code>github.com/labstack/echo</code>。  </p>
-<p> 根据提示下载该依赖： </p>
-<pre><code class="bash">go get github.com/labstack/echo
-</code></pre>
-<p> 可以看到它开始下载所需依赖。具体执行情况如下图所示：<br> <img src="/../imgs/Go/008-%E4%B8%8B%E8%BD%BD%E4%BE%9D%E8%B5%96%E8%BF%87%E7%A8%8B.png" alt="下载依赖过程">  </p>
-<p> 现在查看 go.mod 内容：  </p>
-<p> <img src="/../imgs/Go/009-go-mod.png" alt="go.mod">  </p>
-<p> go module安装 package 的原则是先拉取最新的 release tag，若无 tag 则拉取最新的 commit，详见 <a target="_blank" rel="noopener" href="https://github.com/golang/go/wiki/Modules">Modules 官方介绍</a>。</p>
-<p> go 会自动生成一个<code>go.sum</code>文件来记录 dependency tree：  </p>
-<p> <img src="/../imgs/Go/010-go-sum.png" alt="go.sum">  </p>
-<p> 再次执行脚本go run main.go发现跳过了检查并安装依赖的步骤：  </p>
-<p> <img src="/../imgs/Go/011-%E8%BF%90%E8%A1%8Cmain-go.png" alt="运行main.go">  </p>
-<ul>
-<li>可以使用命令<code>go list -m -u all</code>来检查可以升级的 package；</li>
-<li>使用<code>go get -u need-upgrade-package</code>升级后会将新的依赖版本更新到<code>go.mod</code>；</li>
-<li>也可以使用<code>go get -u</code>升级所有依赖。</li>
-</ul>
-</li>
+请勿尝试通过从 <code>/usr/bin</code> 删除 Java 工具来卸载 Java。此目录是系统软件的一部分，下次对操作系统执行更新时，Apple 会重置所有更改。</li>
 </ol>
-<h3 id="2-2-示例2"><a href="#2-2-示例2" class="headerlink" title="2.2. 示例2"></a>2.2. 示例2</h3><p>改造现有项目。</p>
-<p>项目目录结构为： </p>
-<pre><code class="bash">|--- main.go
-|--- api
-      |--- apis.go
-</code></pre>
-<p>main.go 源码为：  </p>
-<pre><code class="go">package main
-
-import (
-    api &quot;./api&quot;  // 这里使用的是相对路径
-    &quot;github.com/labstack/echo&quot;
-)
-
-func main() &#123;
-    e := echo.New()
-    e.GET(&quot;/&quot;, api.HelloWorld)
-    e.Logger.Fatal(e.Start(&quot;:1323&quot;))
-&#125;
-</code></pre>
-<p>api&#x2F;apis.go 源码为：</p>
-<pre><code class="go">package api
-
-import (
-    &quot;net/http&quot;
-    &quot;github.com/labstack/echo&quot;
-)
-
-func HelloWorld(c echo.Context) error &#123;
-    return c.JSON(http.StatusOK, &quot;hello world&quot;)
-&#125;
-</code></pre>
-<ol>
-<li><p>使用 <code>go mod init hello</code> 初始化 <code>go.mod</code></p>
-<pre><code class="bash">go mod init hello
-</code></pre>
-<p> 显示使用go mod tidy来添加requirements和sums： </p>
-<pre><code class="bash">go: creating new go.mod: module hello
-go: to add module requirements and sums:
-        go mod tidy
-</code></pre>
-</li>
-<li><p>运行<code>go mod tidy</code><br> 运行结果如下图所示：<br> <img src="/../imgs/Go/012-go%20mod%20init%E5%92%8Cgo%20mod%20tidy%E8%BF%90%E8%A1%8C%E7%BB%93%E6%9E%9C.png" alt="go mod init和go mod tidy运行结果">  </p>
-<p> 可以看到，出现了这样的提示： </p>
-<pre><code class="bash">hello imports
-        ./api: &quot;./api&quot; is relative, but relative import paths are not supported in module mode
-</code></pre>
-<p> 说明相对路径的引用go mod不支持。  </p>
-</li>
-<li><p>更新旧的 package import 方式<br> 将main.go改写成： </p>
-<pre><code class="go">package main
-import (
-    api &quot;hello/api&quot; // 这里使用的是相对路径
-    &quot;github.com/labstack/echo&quot;
-)
-
-func main() &#123;
-    e := echo.New()
-    e.GET(&quot;/&quot;, api.HelloWorld)
-    e.Logger.Fatal(e.Start(&quot;:1323&quot;))
-&#125;
-</code></pre>
-<p> 到这里就和新创建一个项目没什么区别了：<br> <img src="/../imgs/Go/013-%E8%BF%90%E8%A1%8Cgo%20run%20main.go%EF%BC%8C%E8%BF%90%E8%A1%8Cgo%20get%E8%8E%B7%E5%8F%96%E4%BE%9D%E8%B5%96%EF%BC%8C%E5%86%8D%E8%BF%90%E8%A1%8Cgo%20run%20main.go.png" alt="运行go run main.go，运行go get获取依赖，再运行go run main.go"></p>
-</li>
-</ol>
-<h2 id="3-使用-replace-替换无法直接获取的-package"><a href="#3-使用-replace-替换无法直接获取的-package" class="headerlink" title="3. 使用 replace 替换无法直接获取的 package"></a>3. 使用 replace 替换无法直接获取的 package</h2><p>由于某些已知的原因，并不是所有的 package 都能成功下载，比如：<code>golang.org</code> 下的包。</p>
-<p>modules 可以通过在 <code>go.mod</code> 文件中使用 replace 指令替换成 github 上对应的库，比如：</p>
-<pre><code class="bash">replace (
-    golang.org/x/crypto v0.0.0-20190313024323-a1f597ede03a =&gt; github.com/golang/crypto v0.0.0-20190313024323-a1f597ede03a
-)
-</code></pre>
-<p>或者：</p>
-<pre><code class="bash">replace golang.org/x/crypto v0.0.0-20190313024323-a1f597ede03a =&gt; github.com/golang/crypto v0.0.0-20190313024323-a1f597ede03a
-</code></pre>
-<h2 id="本文部分内容参考"><a href="#本文部分内容参考" class="headerlink" title="本文部分内容参考"></a>本文部分内容参考</h2><p>[1] <a target="_blank" rel="noopener" href="http://c.biancheng.net/view/5712.html">http://c.biancheng.net/view/5712.html</a></p>
+<h2 id="本文部分内容参考"><a href="#本文部分内容参考" class="headerlink" title="本文部分内容参考"></a>本文部分内容参考</h2><p>[1] <a target="_blank" rel="noopener" href="https://www.zhihu.com/question/428915523">https://www.zhihu.com/question/428915523</a><br>[2] <a target="_blank" rel="noopener" href="https://blog.csdn.net/kingscoming/article/details/78860702">https://blog.csdn.net/kingscoming/article/details/78860702</a><br>[3] <a target="_blank" rel="noopener" href="https://www.java.com/zh-CN/download/help/mac_uninstall_java.html">https://www.java.com/zh-CN/download/help/mac_uninstall_java.html</a>   </p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 rolling.pisces@gmail.com </span>
@@ -658,12 +488,12 @@ func main() &#123;
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>📂Go Module</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">2k</span></p>
+    <p><span class="copy-title">文章标题:</span>📂安装Java</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">1k</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="翻滚的鱼">翻滚的鱼</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-07-14, 21:19:50</p>
-    <p><span class="copy-title">最后更新:</span>2022-07-14, 22:26:13</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/14/Go-Module/" title="📂Go Module">https://rollingpisces.github.io/2022/07/14/Go-Module/</a>
+    <p><span class="copy-title">发布时间:</span>2022-07-14, 22:24:51</p>
+    <p><span class="copy-title">最后更新:</span>2022-07-14, 22:40:47</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/14/%E5%AE%89%E8%A3%85Java/" title="📂安装Java">https://rollingpisces.github.io/2022/07/14/%E5%AE%89%E8%A3%85Java/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>

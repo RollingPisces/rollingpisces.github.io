@@ -2,9 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>💡安装Go | 翻滚的鱼</title>
+  <title>📂GOPATH | 翻滚的鱼</title>
   <meta name="keywords" content=" Go , 语言 ">
-  <meta name="description" content="💡安装Go | 翻滚的鱼">
+  <meta name="description" content="📂GOPATH | 翻滚的鱼">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="description" content="[toc] GOPATH是Go语言中使用的一个环境变量，它使用绝对路径提供项目的工作目录。   工作目录是一个工程开发的相对参考目录，好比当你要在公司编写一套服务器代码，你的工位所包含的桌面、计算机及椅子就是你的工作区。工作区的概念与工作目录的概念也是类似的。如果不使用工作目录的概念，在多人开发时，每个人有一套自己的目录结构，读取配置文件的位置不统一，输出的二进制运行文件也不统一，这样会导致开发的">
 <meta property="og:type" content="article">
@@ -255,9 +255,9 @@
 </aside>
 <div id="post">
     <div class="pjax">
-        <article id="post-安装Go" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-GOPATH" class="article article-type-post" itemscope itemprop="blogPost">
     
-        <h1 class="article-title">💡安装Go</h1>
+        <h1 class="article-title">📂GOPATH</h1>
     
     <div class="article-meta">
         
@@ -286,12 +286,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-07-14 19:20:55'>2022-07-14 15:23</time>
+            发布时间 : <time class="date" title='最后更新: 2022-07-14 20:14:06'>2022-07-14 19:46</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:211</span>
+        <span>字数:790</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -321,7 +321,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="toc-text">1. 下载安装包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Linux%E7%B3%BB%E7%BB%9F%E7%89%B9%E5%88%AB%E6%8C%87%E5%AF%BC"><span class="toc-text">1.1. Linux系统特别指导</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%A3%80%E6%9F%A5Go%E7%8E%AF%E5%A2%83%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="toc-text">2. 检查Go环境是否安装成功</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E7%9C%8BGOPATH%E4%BF%A1%E6%81%AF"><span class="toc-text">1. 使用命令行查看GOPATH信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8GOPATH%E7%9A%84%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-text">2. 使用GOPATH的工程结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Go%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%9F%A5%E7%9C%8B%E4%B8%8E%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. Go环境变量的查看与设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E5%8F%82%E8%80%83"><span class="toc-text">本文部分内容参考</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -337,35 +337,92 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%B8%8B%E8%BD%BD%E5%AE%89%E8%A3%85%E5%8C%85"><span class="toc-text">1. 下载安装包</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-1-Linux%E7%B3%BB%E7%BB%9F%E7%89%B9%E5%88%AB%E6%8C%87%E5%AF%BC"><span class="toc-text">1.1. Linux系统特别指导</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E6%A3%80%E6%9F%A5Go%E7%8E%AF%E5%A2%83%E6%98%AF%E5%90%A6%E5%AE%89%E8%A3%85%E6%88%90%E5%8A%9F"><span class="toc-text">2. 检查Go环境是否安装成功</span></a></li></ol></div></p>
-<h2 id="1-下载安装包"><a href="#1-下载安装包" class="headerlink" title="1. 下载安装包"></a>1. 下载安装包</h2><p>官网：<a target="_blank" rel="noopener" href="https://golang.org/dl/">https://golang.org/dl/</a>  </p>
-<p><img src="/../imgs/Go/002-Go%E5%AE%89%E8%A3%85%E5%8C%85.png" alt="Go安装包">  </p>
-<p>根据操作系统选择相应的安装包进行安装。</p>
-<h3 id="1-1-Linux系统特别指导"><a href="#1-1-Linux系统特别指导" class="headerlink" title="1.1. Linux系统特别指导"></a>1.1. Linux系统特别指导</h3><ol>
-<li><p>获取安装包地址<br> 对于linux系统，右键单击安装包的链接，选择<code>Copy link address</code>（复制链接地址）：  </p>
-<p> <img src="/../imgs/Go/003%E5%A4%8D%E5%88%B6%E9%93%BE%E6%8E%A5%E5%9C%B0%E5%9D%80.png" alt="复制链接地址">  </p>
-</li>
-<li><p>在Linux机器上wget刚刚复制的address</p>
-<pre><code class="bash"> wget https://go.dev/dl/go1.18.3.linux-amd64.tar.gz
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E7%9C%8BGOPATH%E4%BF%A1%E6%81%AF"><span class="toc-text">1. 使用命令行查看GOPATH信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8GOPATH%E7%9A%84%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-text">2. 使用GOPATH的工程结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Go%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%9F%A5%E7%9C%8B%E4%B8%8E%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. Go环境变量的查看与设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E5%8F%82%E8%80%83"><span class="toc-text">本文部分内容参考</span></a></li></ol></div></p>
+<p>GOPATH是Go语言中使用的一个环境变量，它使用绝对路径提供项目的工作目录。  </p>
+<p>工作目录是一个工程开发的相对参考目录，好比当你要在公司编写一套服务器代码，你的工位所包含的桌面、计算机及椅子就是你的工作区。工作区的概念与工作目录的概念也是类似的。如果不使用工作目录的概念，在多人开发时，每个人有一套自己的目录结构，读取配置文件的位置不统一，输出的二进制运行文件也不统一，这样会导致开发的标准不统一，影响开发效率。  </p>
+<p>GOPATH适合处理大量Go语言源码、多个包组合而成的复杂工程。  </p>
+<h2 id="1-使用命令行查看GOPATH信息"><a href="#1-使用命令行查看GOPATH信息" class="headerlink" title="1. 使用命令行查看GOPATH信息"></a>1. 使用命令行查看GOPATH信息</h2><pre><code class="bash">go env
 </code></pre>
-</li>
-<li><p>解压缩<br> 执行tar将上面安装包解压到<code>/usr/local</code>目录下：</p>
-<pre><code class="bash">sudo tar -C /usr/local/ -zxvf go1.18.3.linux-amd64.tar.gz
+<p>运行结果（下面结果中，真实的用户名用{Username}代替）：</p>
+<pre><code class="bash">GO111MODULE=&quot;&quot;
+GOARCH=&quot;amd64&quot;
+GOBIN=&quot;&quot;
+GOCACHE=&quot;/Users/&#123;Username&#125;/Library/Caches/go-build&quot;
+GOENV=&quot;/Users/&#123;Username&#125;/Library/Application Support/go/env&quot;
+GOEXE=&quot;&quot;
+GOEXPERIMENT=&quot;&quot;
+GOFLAGS=&quot;&quot;
+GOHOSTARCH=&quot;amd64&quot;
+GOHOSTOS=&quot;darwin&quot;
+GOINSECURE=&quot;&quot;
+GOMODCACHE=&quot;/Users/&#123;Username&#125;/go/pkg/mod&quot;
+GONOPROXY=&quot;&quot;
+GONOSUMDB=&quot;&quot;
+GOOS=&quot;darwin&quot;
+GOPATH=&quot;/Users/&#123;Username&#125;/go&quot;
+GOPRIVATE=&quot;&quot;
+GOPROXY=&quot;https://proxy.golang.org,direct&quot;
+GOROOT=&quot;/usr/local/go&quot;
+GOSUMDB=&quot;sum.golang.org&quot;
+GOTMPDIR=&quot;&quot;
+GOTOOLDIR=&quot;/usr/local/go/pkg/tool/darwin_amd64&quot;
+GOVCS=&quot;&quot;
+GOVERSION=&quot;go1.18.3&quot;
+GCCGO=&quot;gccgo&quot;
+GOAMD64=&quot;v1&quot;
+AR=&quot;ar&quot;
+CC=&quot;clang&quot;
+CXX=&quot;clang++&quot;
+CGO_ENABLED=&quot;1&quot;
+GOMOD=&quot;/dev/null&quot;
+GOWORK=&quot;&quot;
+CGO_CFLAGS=&quot;-g -O2&quot;
+CGO_CPPFLAGS=&quot;&quot;
+CGO_CXXFLAGS=&quot;-g -O2&quot;
+CGO_FFLAGS=&quot;-g -O2&quot;
+CGO_LDFLAGS=&quot;-g -O2&quot;
+PKG_CONFIG=&quot;pkg-config&quot;
+GOGCCFLAGS=&quot;-fPIC -arch x86_64 -m64 -pthread -fno-caret-diagnostics -Qunused-arguments -fmessage-length=0 -fdebug-prefix-map=/var/folders/j4/7ng4g2t11hsgtg98308br_6m0000gn/T/go-build3214703220=/tmp/go-build -gno-record-gcc-switches -fno-common&quot;
 </code></pre>
-</li>
-<li><p>打开<code>/etc/profile</code>（或者<code>$HOME/.profile</code>）设置GOROOT和PATH</p>
-<pre><code class="bash">sudo vi /etc/profile
-# 最后一行添加：
-export GOROOT=/usr/local/go
-export PATH=$PATH:$GOROOT/bin
-# 保存退出后source一下：
-source /etc/profile
+<ul>
+<li>GOARCH：目标处理器架构</li>
+<li>GOBIN：编译器和链接器的安装位置</li>
+<li>GOOS：目标操作系统</li>
+<li>GOPATH：当前工作目录</li>
+<li>GOROOT：Go开发包的安装目录</li>
+</ul>
+<p>在 Go 1.8 版本之前，GOPATH 环境变量默认是空的。从 Go 1.8 版本开始，Go 开发包在安装完成后，将 GOPATH 赋予了一个默认的目录，参见下表：  </p>
+<table>
+<thead>
+<tr>
+<th>平台</th>
+<th>默认值</th>
+<th>举例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Windows 平台</td>
+<td>%USERPROFILE%&#x2F;go</td>
+<td>C:\Users\用户名\go</td>
+</tr>
+<tr>
+<td>Unix 平台</td>
+<td>$HOME&#x2F;go</td>
+<td>&#x2F;home&#x2F;用户名&#x2F;go</td>
+</tr>
+</tbody></table>
+<h2 id="2-使用GOPATH的工程结构"><a href="#2-使用GOPATH的工程结构" class="headerlink" title="2. 使用GOPATH的工程结构"></a>2. 使用GOPATH的工程结构</h2><p>在 GOPATH 指定的工作目录下，代码总是会保存在<code>$GOPATH/src</code>目录下。在工程经过<code>go build</code>、<code>go install</code>或<code>go get</code>等指令后，会将产生的二进制可执行文件放在<code>$GOPATH/bin</code>目录下，生成的中间缓存文件会被保存在<code>$GOPATH/pkg</code>下。  </p>
+<p>如果需要将整个源码添加到版本管理工具（Version Control System，VCS）中时，只需要添加 <code>$GOPATH/src</code>目录的源码即可。bin和pkg目录的内容都可以由src目录生成。  </p>
+<h2 id="3-Go环境变量的查看与设置"><a href="#3-Go环境变量的查看与设置" class="headerlink" title="3. Go环境变量的查看与设置"></a>3. Go环境变量的查看与设置</h2><p>查看go的环境变量：</p>
+<pre><code class="bash">go env
 </code></pre>
-</li>
-</ol>
-<h2 id="2-检查Go环境是否安装成功"><a href="#2-检查Go环境是否安装成功" class="headerlink" title="2. 检查Go环境是否安装成功"></a>2. 检查Go环境是否安装成功</h2><pre><code class="bash">go version
+<p>设置go的环境变量：  </p>
+<pre><code class="bash">go env -w &#123;Environment_variable&#125;=&#123;Value&#125;
+
+# 例如：
+go env -w GO111MODULE=on
 </code></pre>
-<p>执行上述命令查看go的版本号，如果成功显示版本号则安装成功。</p>
+<h2 id="本文部分内容参考"><a href="#本文部分内容参考" class="headerlink" title="本文部分内容参考"></a>本文部分内容参考</h2><p>[1] 参考链接：<a target="_blank" rel="noopener" href="http://c.biancheng.net/view/88.html">http://c.biancheng.net/view/88.html</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 rolling.pisces@gmail.com </span>
@@ -379,12 +436,12 @@ source /etc/profile
 
 
 <div class="article_copyright">
-    <p><span class="copy-title">文章标题:</span>💡安装Go</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">236</span></p>
+    <p><span class="copy-title">文章标题:</span>📂GOPATH</p>
+    <p><span class="copy-title">字数:</span><span class="post-count">827</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="翻滚的鱼">翻滚的鱼</a></p>
-    <p><span class="copy-title">发布时间:</span>2022-07-14, 15:23:33</p>
-    <p><span class="copy-title">最后更新:</span>2022-07-14, 19:20:55</p>
-    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/14/%E5%AE%89%E8%A3%85Go/" title="💡安装Go">https://rollingpisces.github.io/2022/07/14/%E5%AE%89%E8%A3%85Go/</a>
+    <p><span class="copy-title">发布时间:</span>2022-07-14, 19:46:18</p>
+    <p><span class="copy-title">最后更新:</span>2022-07-14, 20:14:06</p>
+    <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/14/GOPATH/" title="📂GOPATH">https://rollingpisces.github.io/2022/07/14/GOPATH/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。
     </p>

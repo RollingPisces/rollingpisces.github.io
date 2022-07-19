@@ -840,6 +840,7 @@
   background: #309e85;
 }
 .nav-right .title-list #outline-list .toc {
+  font-family: Helvetica;
   list-style-type: none;
   font-size: 1rem;
   line-height: 1.3;

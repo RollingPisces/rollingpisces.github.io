@@ -6,25 +6,23 @@
   <meta name="keywords" content=" 语言 , Go ">
   <meta name="description" content="📂GOPATH | 翻滚的鱼">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="[toc]   要做java开发的话，我们只需要安装JDK（Java Development Kit）；如果只需要运行java程序，只需要安装JRE（Java Runtime Environment）。       JVM：Java Virtual Machine  它是整个java实现跨平台的最核心的部分，所有的java程序会首先被编译为.class的类文件，这种类文件可以在虚拟机上执行，也就是">
+<meta name="description" content="[toc] 1. 什么是WebAssemblyWebAssembly是一个可移植的编程目标（compilation target），它最早是运行在浏览器中的，用于解决JavaScript带来的性能问题。 1.1. JavaScript的性能问题下图为Microsoft Edge的JavaScript引擎Chakra的结构：      (图片来自：https:&#x2F;&#x2F;adtmag.com&#x2F;article">
 <meta property="og:type" content="article">
-<meta property="og:title" content="📂安装Java">
-<meta property="og:url" content="https://rollingpisces.github.io/2022/07/14/Java/%E5%AE%89%E8%A3%85Java/index.html">
+<meta property="og:title" content="📂WebAssembly和WASI介绍">
+<meta property="og:url" content="https://rollingpisces.github.io/2022/07/20/WebAssembly/WebAssembly%E5%92%8CWASI%E4%BB%8B%E7%BB%8D/index.html">
 <meta property="og:site_name" content="翻滚的鱼">
-<meta property="og:description" content="[toc]   要做java开发的话，我们只需要安装JDK（Java Development Kit）；如果只需要运行java程序，只需要安装JRE（Java Runtime Environment）。       JVM：Java Virtual Machine  它是整个java实现跨平台的最核心的部分，所有的java程序会首先被编译为.class的类文件，这种类文件可以在虚拟机上执行，也就是">
+<meta property="og:description" content="[toc] 1. 什么是WebAssemblyWebAssembly是一个可移植的编程目标（compilation target），它最早是运行在浏览器中的，用于解决JavaScript带来的性能问题。 1.1. JavaScript的性能问题下图为Microsoft Edge的JavaScript引擎Chakra的结构：      (图片来自：https:&#x2F;&#x2F;adtmag.com&#x2F;article">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://rollingpisces.github.io/imgs/java/001-Java%E7%8E%AF%E5%A2%83%E6%80%BB%E8%A7%88%E5%9B%BE.png">
-<meta property="og:image" content="https://rollingpisces.github.io/imgs/java/002-MacOS%20JDK%208%20%E5%AE%89%E8%A3%85.png">
-<meta property="og:image" content="https://rollingpisces.github.io/imgs/java/003-MacOS%EF%BC%9Ajdk%E4%BD%8D%E7%BD%AE%E5%92%8C%E4%B8%8B%E9%9D%A2%E7%9A%84%E6%96%87%E4%BB%B6%E5%A4%B9.png">
-<meta property="og:image" content="https://rollingpisces.github.io/imgs/java/004-Java%E7%89%88%E6%9C%AC%E5%8F%B7.png">
-<meta property="og:image" content="https://rollingpisces.github.io/imgs/java/005-MacOS%EF%BC%9Ajre%E5%AE%89%E8%A3%85%E6%96%87%E4%BB%B6.png">
-<meta property="article:published_time" content="2022-07-15T02:24:51.000Z">
-<meta property="article:modified_time" content="2022-07-15T02:40:47.471Z">
+<meta property="og:image" content="https://rollingpisces.github.io/imgs/WebAssembly/0001-Chakra%20and%20ChakraCore">
+<meta property="og:image" content="https://rollingpisces.github.io/imgs/WebAssembly/008-Implemented%20Features%20in%20Popular%20Engines.png">
+<meta property="article:published_time" content="2022-07-20T15:03:23.000Z">
+<meta property="article:modified_time" content="2022-07-21T13:43:35.626Z">
 <meta property="article:author" content="翻滚的鱼">
-<meta property="article:tag" content="语言">
-<meta property="article:tag" content="Java">
+<meta property="article:tag" content="WebAssembly">
+<meta property="article:tag" content="WASM">
+<meta property="article:tag" content="WASI">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://rollingpisces.github.io/imgs/java/001-Java%E7%8E%AF%E5%A2%83%E6%80%BB%E8%A7%88%E5%9B%BE.png">
+<meta name="twitter:image" content="https://rollingpisces.github.io/imgs/WebAssembly/0001-Chakra%20and%20ChakraCore">
 
 
 <link rel="icon" href="/img/avatar.png">
@@ -98,10 +96,41 @@
     <li>
         <div class="all active" data-rel="全部文章">全部文章
             
-                <small>(8)</small>
+                <small>(9)</small>
             
         </div>
     </li>
+    
+        
+            
+                <li>
+                    <div data-rel="技术">
+                        <i class="fold iconfont icon-right"></i>
+                        
+                        技术
+                        <small>(1)</small>
+                        
+                    </div>
+                    
+                        <ul class="sub hide">
+                            
+                                <li>
+                                    <div data-rel="技术<--->WASM">
+                                        
+                                        WASM
+                                        
+                                            <small>(1
+                                                )</small>
+                                        
+                                    </div>
+                                    
+                                </li>
+                            
+                        </ul>
+                    
+                </li>
+            
+        
     
         
             
@@ -154,6 +183,10 @@
             
         
     
+        
+            
+        
+    
 </ul>
 <div class="left-bottom">
     <div class="menus">
@@ -167,8 +200,8 @@
         
     </div>
 </div>
-<input type="hidden" id="yelog_site_posts_number" value="8">
-<input type="hidden" id="yelog_site_word_count" value="8.5k">
+<input type="hidden" id="yelog_site_posts_number" value="9">
+<input type="hidden" id="yelog_site_word_count" value="10k">
 <div style="display: none">
     <span id="busuanzi_value_site_uv"></span>
     <span id="busuanzi_value_site_pv"></span>
@@ -225,6 +258,18 @@
                 <i class="iconfont icon-tag"></i><a>Java</a>
             </li>
         
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WASI</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WASM</a>
+            </li>
+        
+            <li class="article-tag-list-item">
+                <i class="iconfont icon-tag"></i><a>WebAssembly</a>
+            </li>
+        
     </div>
 
 </div>
@@ -237,61 +282,25 @@
     <nav id="title-list-nav">
         
         
-        <a id="top" class="全部文章 语言 Go "
-           href="/2022/07/14/Go/Go%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B/"
-           data-tag="语言,Go"
+        <a  class="全部文章 技术 WASM "
+           href="/2022/07/20/WebAssembly/WebAssembly%E5%92%8CWASI%E4%BB%8B%E7%BB%8D/"
+           data-tag="WebAssembly,WASM,WASI"
            data-author="" >
-            <span class="post-title" title="🎁Go语言简介">🎁Go语言简介</span>
-            <span class="post-date" title="2022-07-14 18:02:54">2022/07/14</span>
+            <span class="post-title" title="📂WebAssembly和WASI介绍">📂WebAssembly和WASI介绍</span>
+            <span class="post-date" title="2022-07-20 11:03:23">2022/07/20</span>
         </a>
         
         
-        <a id="top" class="全部文章 语言 Go "
-           href="/2022/07/14/Go/%E5%AE%89%E8%A3%85Go/"
-           data-tag="语言,Go"
+        <a  class="全部文章 语言 Java "
+           href="/2022/07/14/Java/%E5%AE%89%E8%A3%85Java/"
+           data-tag="语言,Java"
            data-author="" >
-            <span class="post-title" title="💡安装Go">💡安装Go</span>
-            <span class="post-date" title="2022-07-14 15:23:33">2022/07/14</span>
+            <span class="post-title" title="📂安装Java">📂安装Java</span>
+            <span class="post-date" title="2022-07-14 22:24:51">2022/07/14</span>
         </a>
         
         
-        <a id="top" class="全部文章 语言 Go "
-           href="/2022/07/14/Go/GOPATH/"
-           data-tag="语言,Go"
-           data-author="" >
-            <span class="post-title" title="📂GOPATH">📂GOPATH</span>
-            <span class="post-date" title="2022-07-14 19:46:18">2022/07/14</span>
-        </a>
-        
-        
-        <a id="top" class="全部文章 语言 Go "
-           href="/2022/07/14/Go/%E7%AC%AC%E4%B8%80%E4%B8%AAGo%E7%A8%8B%E5%BA%8F/"
-           data-tag="语言,Go"
-           data-author="" >
-            <span class="post-title" title="📂第一个Go程序">📂第一个Go程序</span>
-            <span class="post-date" title="2022-07-14 20:33:24">2022/07/14</span>
-        </a>
-        
-        
-        <a id="top" class="全部文章 语言 Go "
-           href="/2022/07/14/Go/Go%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BC%96%E8%AF%91%E5%92%8C%E8%BF%90%E8%A1%8C/"
-           data-tag="语言,Go"
-           data-author="" >
-            <span class="post-title" title="📂Go语言的编译和运行">📂Go语言的编译和运行</span>
-            <span class="post-date" title="2022-07-14 20:57:42">2022/07/14</span>
-        </a>
-        
-        
-        <a id="top" class="全部文章 语言 Go "
-           href="/2022/07/14/Go/import%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"
-           data-tag="语言,Go"
-           data-author="" >
-            <span class="post-title" title="📂import的基本用法">📂import的基本用法</span>
-            <span class="post-date" title="2022-07-14 21:07:23">2022/07/14</span>
-        </a>
-        
-        
-        <a id="top" class="全部文章 语言 Go "
+        <a  class="全部文章 语言 Go "
            href="/2022/07/14/Go/Go-Module/"
            data-tag="语言,Go"
            data-author="" >
@@ -300,12 +309,57 @@
         </a>
         
         
-        <a id="top" class="全部文章 语言 Java "
-           href="/2022/07/14/Java/%E5%AE%89%E8%A3%85Java/"
-           data-tag="语言,Java"
+        <a  class="全部文章 语言 Go "
+           href="/2022/07/14/Go/import%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/"
+           data-tag="语言,Go"
            data-author="" >
-            <span class="post-title" title="📂安装Java">📂安装Java</span>
-            <span class="post-date" title="2022-07-14 22:24:51">2022/07/14</span>
+            <span class="post-title" title="📂import的基本用法">📂import的基本用法</span>
+            <span class="post-date" title="2022-07-14 21:07:23">2022/07/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 语言 Go "
+           href="/2022/07/14/Go/Go%E8%AF%AD%E8%A8%80%E7%9A%84%E7%BC%96%E8%AF%91%E5%92%8C%E8%BF%90%E8%A1%8C/"
+           data-tag="语言,Go"
+           data-author="" >
+            <span class="post-title" title="📂Go语言的编译和运行">📂Go语言的编译和运行</span>
+            <span class="post-date" title="2022-07-14 20:57:42">2022/07/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 语言 Go "
+           href="/2022/07/14/Go/%E7%AC%AC%E4%B8%80%E4%B8%AAGo%E7%A8%8B%E5%BA%8F/"
+           data-tag="语言,Go"
+           data-author="" >
+            <span class="post-title" title="📂第一个Go程序">📂第一个Go程序</span>
+            <span class="post-date" title="2022-07-14 20:33:24">2022/07/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 语言 Go "
+           href="/2022/07/14/Go/GOPATH/"
+           data-tag="语言,Go"
+           data-author="" >
+            <span class="post-title" title="📂GOPATH">📂GOPATH</span>
+            <span class="post-date" title="2022-07-14 19:46:18">2022/07/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 语言 Go "
+           href="/2022/07/14/Go/Go%E8%AF%AD%E8%A8%80%E7%AE%80%E4%BB%8B/"
+           data-tag="语言,Go"
+           data-author="" >
+            <span class="post-title" title="🎁Go语言简介">🎁Go语言简介</span>
+            <span class="post-date" title="2022-07-14 18:02:54">2022/07/14</span>
+        </a>
+        
+        
+        <a  class="全部文章 语言 Go "
+           href="/2022/07/14/Go/%E5%AE%89%E8%A3%85Go/"
+           data-tag="语言,Go"
+           data-author="" >
+            <span class="post-title" title="💡安装Go">💡安装Go</span>
+            <span class="post-date" title="2022-07-14 15:23:33">2022/07/14</span>
         </a>
         
         <div id="no-item-tips">
@@ -332,8 +386,6 @@
     
     <div class="article-meta">
         
-        <span class="top"><a>置顶</a></span>
-        
         
         
         <span class="book">
@@ -359,12 +411,12 @@
     </div>
     <div class="article-meta">
         
-            发布时间 : <time class="date" title='最后更新: 2022-07-14 22:26:23'>2022-07-14 19:46</time>
+            发布时间 : <time class="date" title='最后更新: 2022-07-20 13:41:03'>2022-07-14 19:46</time>
         
     </div>
     <div class="article-meta">
         
-        <span>字数:790</span>
+        <span>字数:786</span>
         
         
         <span id="busuanzi_container_page_pv">
@@ -394,7 +446,7 @@
     
     <div class="toc-ref">
     
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E7%9C%8BGOPATH%E4%BF%A1%E6%81%AF"><span class="toc-text">1. 使用命令行查看GOPATH信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8GOPATH%E7%9A%84%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-text">2. 使用GOPATH的工程结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Go%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%9F%A5%E7%9C%8B%E4%B8%8E%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. Go环境变量的查看与设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E5%8F%82%E8%80%83"><span class="toc-text">本文部分内容参考</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E7%9C%8BGOPATH%E4%BF%A1%E6%81%AF"><span class="toc-text">1. 使用命令行查看GOPATH信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8GOPATH%E7%9A%84%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-text">2. 使用GOPATH的工程结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Go%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%9F%A5%E7%9C%8B%E4%B8%8E%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. Go环境变量的查看与设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
     
 <style>
     .left-col .switch-btn,
@@ -410,7 +462,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E7%9C%8BGOPATH%E4%BF%A1%E6%81%AF"><span class="toc-text">1. 使用命令行查看GOPATH信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8GOPATH%E7%9A%84%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-text">2. 使用GOPATH的工程结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Go%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%9F%A5%E7%9C%8B%E4%B8%8E%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. Go环境变量的查看与设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%AC%E6%96%87%E9%83%A8%E5%88%86%E5%86%85%E5%AE%B9%E5%8F%82%E8%80%83"><span class="toc-text">本文部分内容参考</span></a></li></ol></div></p>
+        <p><div class='inner-toc'><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E7%9C%8BGOPATH%E4%BF%A1%E6%81%AF"><span class="toc-text">1. 使用命令行查看GOPATH信息</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8GOPATH%E7%9A%84%E5%B7%A5%E7%A8%8B%E7%BB%93%E6%9E%84"><span class="toc-text">2. 使用GOPATH的工程结构</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-Go%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E7%9A%84%E6%9F%A5%E7%9C%8B%E4%B8%8E%E8%AE%BE%E7%BD%AE"><span class="toc-text">3. Go环境变量的查看与设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol></div></p>
 <p>GOPATH是Go语言中使用的一个环境变量，它使用绝对路径提供项目的工作目录。  </p>
 <p>工作目录是一个工程开发的相对参考目录，好比当你要在公司编写一套服务器代码，你的工位所包含的桌面、计算机及椅子就是你的工作区。工作区的概念与工作目录的概念也是类似的。如果不使用工作目录的概念，在多人开发时，每个人有一套自己的目录结构，读取配置文件的位置不统一，输出的二进制运行文件也不统一，这样会导致开发的标准不统一，影响开发效率。  </p>
 <p>GOPATH适合处理大量Go语言源码、多个包组合而成的复杂工程。  </p>
@@ -495,7 +547,7 @@ GOGCCFLAGS=&quot;-fPIC -arch x86_64 -m64 -pthread -fno-caret-diagnostics -Qunuse
 # 例如：
 go env -w GO111MODULE=on
 </code></pre>
-<h2 id="本文部分内容参考"><a href="#本文部分内容参考" class="headerlink" title="本文部分内容参考"></a>本文部分内容参考</h2><p>[1] 参考链接：<a target="_blank" rel="noopener" href="http://c.biancheng.net/view/88.html">http://c.biancheng.net/view/88.html</a></p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><p>[1] 参考链接：<a target="_blank" rel="noopener" href="http://c.biancheng.net/view/88.html">http://c.biancheng.net/view/88.html</a></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 rolling.pisces@gmail.com </span>
@@ -510,10 +562,10 @@ go env -w GO111MODULE=on
 
 <div class="article_copyright">
     <p><span class="copy-title">文章标题:</span>📂GOPATH</p>
-    <p><span class="copy-title">字数:</span><span class="post-count">827</span></p>
+    <p><span class="copy-title">字数:</span><span class="post-count">819</span></p>
     <p><span class="copy-title">本文作者:</span><a  title="翻滚的鱼">翻滚的鱼</a></p>
     <p><span class="copy-title">发布时间:</span>2022-07-14, 19:46:18</p>
-    <p><span class="copy-title">最后更新:</span>2022-07-14, 22:26:23</p>
+    <p><span class="copy-title">最后更新:</span>2022-07-20, 13:41:03</p>
     <span class="copy-title">原始链接:</span><a class="post-url" href="/2022/07/14/Go/GOPATH/" title="📂GOPATH">https://rollingpisces.github.io/2022/07/14/Go/GOPATH/</a>
     <p>
         <span class="copy-title">版权声明:</span><i class="fa fa-creative-commons"></i> <a rel="license noopener" target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">&#34;署名-非商用-相同方式共享 4.0&#34;</a> 转载请保留原文链接及作者。

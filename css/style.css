@@ -1387,9 +1387,10 @@
 }
 #post .pjax article .img_alt span {
   border-bottom: 1px solid #d9d9d9;
-  padding: 10px 30px;
+  padding: 1px 2px;
   color: #969696;
   font-family: "Open Sans", "Hiragino Sans GB", sans-serif;
+  font-size: 80%;
   display: inline-block;
 }
 #post .pjax article blockquote {

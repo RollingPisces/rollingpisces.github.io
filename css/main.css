@@ -2646,7 +2646,7 @@ code {
   flex-wrap: wrap;
   justify-content: center;
   justify-content: left;
-  margin-bottom: 10px;
+  padding-bottom: 5rem;
 }
 .gallery-link {
   border: none;
@@ -2666,4 +2666,40 @@ code {
 }
 .book-name {
   text-align: center;
+}
+.first-section-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 1rem;
+  background: #dce3ff;
+}
+.section-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: left;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  background: #dce3ff;
+}
+.section-content {
+  font-size: 1.1rem;
+}
+.platform-link {
+  border-bottom: 1px solid #d1d1d1;
+}
+.platform-link:hover {
+  color: #fc5523;
+  border-bottom: 1px solid #fc5523;
+}
+.platform-icon {
+  height: 1rem;
+  border-radius: 1rem;
+  border: 1px solid #d1d1d1;
+  align-content: center;
+  float: left;
+  margin: 0.5rem;
+}
+.clear {
+  clear: both;
 }

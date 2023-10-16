@@ -2638,6 +2638,7 @@ code {
   -khtml-user-select: none;
   -o-user-select: none;
   user-select: none;
+  font-size: 1.2rem;
 }
 .gallery {
   background: #fff;
@@ -2672,6 +2673,8 @@ code {
   font-weight: bold;
   text-align: left;
   margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   background: #dce3ff;
 }
 .section-title {
@@ -2680,10 +2683,16 @@ code {
   text-align: left;
   margin-top: 2rem;
   margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   background: #dce3ff;
 }
 .section-content {
   font-size: 1.1rem;
+  margin: 0.5rem;
+}
+.intro-content {
+  padding-left: 2em;
 }
 .platform-link {
   border-bottom: 1px solid #d1d1d1;

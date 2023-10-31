@@ -2728,3 +2728,9 @@ code {
 .clear {
   clear: both;
 }
+.wl-panel {
+  border-radius: 0;
+}
+.wl-btn.primary {
+  background: #dce3ff;
+}

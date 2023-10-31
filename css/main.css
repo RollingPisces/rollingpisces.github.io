@@ -2970,8 +2970,6 @@ code {
   padding: 0 4px;
   background-color: var(--waline-theme-color);
   border-bottom: 2px dashed var(--waline-border-color);
-  border-top-left-radius: 0.75em;
-  border-top-right-radius: 0.75em;
 }
 @media (max-width: 580px) {
   .wl-header {
@@ -3352,6 +3350,7 @@ code {
   font-weight: bold;
   font-size: 1em;
   line-height: 1;
+  border-left: 1px solid #fff;
   text-decoration: none;
 }
 .wl-card span.wl-nick {

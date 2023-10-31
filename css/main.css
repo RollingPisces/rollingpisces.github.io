@@ -2968,6 +2968,7 @@ code {
   display: flex;
   overflow: hidden;
   padding: 0 4px;
+  background-color: var(--waline-theme-color);
   border-bottom: 2px dashed var(--waline-border-color);
   border-top-left-radius: 0.75em;
   border-top-right-radius: 0.75em;
@@ -2981,7 +2982,9 @@ code {
   min-width: 40px;
   padding: 0.75em 0.5em;
   color: var(--waline-color);
-  font-size: 0.75em;
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--waline-white);
   text-align: center;
 }
 .wl-header input {
@@ -2989,7 +2992,8 @@ code {
   width: 0;
   padding: 0.5em;
   background: rgba(0,0,0,0);
-  font-size: 0.625em;
+  font-size: 1em;
+  font-weight: bold;
   resize: none;
 }
 .wl-header-item {
@@ -3033,7 +3037,7 @@ code {
 }
 .wl-editor,
 .wl-input {
-  max-width: calc(100% - 1.5em);
+  max-width: calc(100% - 1.75em);
   border: none;
   color: var(--waline-color);
   outline: none;

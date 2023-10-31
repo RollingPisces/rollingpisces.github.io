@@ -3034,7 +3034,7 @@ code {
 .wl-editor,
 .wl-input {
   max-width: calc(100% - 1.75em);
-  border: none;
+  border: 1px solid var(--waline-border-color);
   outline: none;
   color: var(--waline-color);
   transition: all 0.25s ease;

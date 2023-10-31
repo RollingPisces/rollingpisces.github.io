@@ -2988,7 +2988,6 @@ code {
   width: 0;
   max-width: calc(100% - 1.75em);
   padding: 0.5em;
-  border: 1px solid var(--waline-border-color);
   background: rgba(0,0,0,0);
   font-size: 1em;
   font-weight: bold;
@@ -3036,6 +3035,7 @@ code {
 }
 .wl-editor,
 .wl-input {
+  max-width: calc(100% - 2em);
   outline: none;
   color: var(--waline-color);
   transition: all 0.25s ease;

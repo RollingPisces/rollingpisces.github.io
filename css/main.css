@@ -2986,9 +2986,8 @@ code {
 .wl-header input {
   flex: 1;
   width: 0;
-  padding: 0.5em;
   background: rgba(0,0,0,0);
-  outline: var(--waline-border-color) ridge 1px;
+  outline: var(--waline-border-color) solid 1px;
   font-size: 1em;
   font-weight: bold;
   resize: none;

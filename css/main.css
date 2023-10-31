@@ -2987,9 +2987,9 @@ code {
 .wl-header input {
   flex: 1;
   width: 0;
-  max-width: calc(100% - 1.75em);
   padding: 0.5em;
   background: rgba(0,0,0,0);
+  border: 1px solid var(--waline-border-color);
   font-size: 1em;
   font-weight: bold;
   resize: none;
@@ -3036,7 +3036,7 @@ code {
 }
 .wl-editor,
 .wl-input {
-  max-width: calc(100% - 2em);
+  max-width: calc(100% - 1.75em);
   outline: none;
   color: var(--waline-color);
   transition: all 0.25s ease;

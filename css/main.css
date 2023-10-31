@@ -2968,7 +2968,6 @@ code {
   display: flex;
   overflow: hidden;
   padding: 0 4px;
-  background-color: var(--waline-theme-color);
   border-bottom: 2px dashed var(--waline-border-color);
 }
 @media (max-width: 580px) {
@@ -2981,8 +2980,8 @@ code {
   padding: 0.75em 0.5em;
   color: var(--waline-color);
   font-size: 1em;
+  border-right: 1px solid var(--waline-white);
   font-weight: bold;
-  color: var(--waline-white);
   text-align: center;
 }
 .wl-header input {
@@ -3350,7 +3349,6 @@ code {
   font-weight: bold;
   font-size: 1em;
   line-height: 1;
-  border-left: 1px solid #fff;
   text-decoration: none;
 }
 .wl-card span.wl-nick {

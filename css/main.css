@@ -3034,7 +3034,7 @@ code {
 .wl-editor,
 .wl-input {
   max-width: 100%;
-  border: none;
+  border-left: 1px solid;
   color: var(--waline-color);
   outline: none;
   transition: all 0.25s ease;
@@ -3344,11 +3344,9 @@ code {
 .wl-card .wl-head .wl-nick {
   position: relative;
   display: inline-block;
-  margin-inline-end: 0.5em;
   font-weight: bold;
   font-size: 1em;
   font-weight: bold;
-  line-height: 1;
   text-decoration: none;
 }
 .wl-card span.wl-nick {

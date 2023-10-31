@@ -2733,14 +2733,14 @@ code {
   --waline-white: #fff;
   --waline-light-grey: #999;
   --waline-dark-grey: #666;
-  --waline-theme-color: #9078f8 !important;
+  --waline-theme-color: #9078f8;
 /* --waline-active-color: #2ecc71; */
-  --waline-active-color: #a794f4 !important;
+  --waline-active-color: #a794f4;
   --waline-color: #444;
   --waline-bgcolor: #fff;
   --waline-bgcolor-light: #f8f8f8;
   --waline-bgcolor-hover: #f0f0f0;
-  --waline-border-color: #ddd;
+  --waline-border-color: #e3d3ff;
   --waline-disable-bgcolor: #f8f8f8;
   --waline-disable-color: #000;
   --waline-code-bgcolor: #282c34;
@@ -2961,7 +2961,6 @@ code {
   width: 100%;
   margin: 0.5em;
   border: var(--waline-border);
-  border-radius: 0em !important;
   background: var(--waline-bgcolor);
   box-shadow: var(--waline-box-shadow);
 }
@@ -3347,7 +3346,8 @@ code {
   display: inline-block;
   margin-inline-end: 0.5em;
   font-weight: bold;
-  font-size: 0.875em;
+  font-size: 1em;
+  font-weight: bold;
   line-height: 1;
   text-decoration: none;
 }

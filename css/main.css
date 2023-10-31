@@ -3033,7 +3033,7 @@ code {
 }
 .wl-editor,
 .wl-input {
-  max-width: 100%;
+  max-width: calc(100% - 1.5em);
   border: none;
   color: var(--waline-color);
   outline: none;

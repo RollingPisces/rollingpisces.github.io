@@ -2967,7 +2967,7 @@ code {
 .wl-header {
   display: flex;
   overflow: hidden;
-  padding: 0 4px;
+  padding: 2px 4px;
   border-bottom: 2px dashed var(--waline-border-color);
 }
 @media (max-width: 580px) {
@@ -2987,6 +2987,7 @@ code {
   flex: 1;
   width: 0;
   padding: 0.5em;
+  border: 1px solid var(--waline-border-color);
   background: rgba(0,0,0,0);
   font-size: 1em;
   font-weight: bold;
@@ -3027,6 +3028,7 @@ code {
   min-height: 8.75em;
   margin: 0.75em 0.5em;
   border-radius: 0.5em;
+  border: none;
   background: rgba(0,0,0,0);
   font-size: 0.875em;
   resize: vertical;
@@ -3034,7 +3036,6 @@ code {
 .wl-editor,
 .wl-input {
   max-width: calc(100% - 1.75em);
-  border: 1px solid var(--waline-border-color);
   outline: none;
   color: var(--waline-color);
   transition: all 0.25s ease;

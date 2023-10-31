@@ -2740,7 +2740,7 @@ code {
   --waline-bgcolor: #fff;
   --waline-bgcolor-light: #f8f8f8;
   --waline-bgcolor-hover: #f0f0f0;
-  --waline-border-color: #e3d3ff;
+  --waline-border-color: #8894f3;
   --waline-disable-bgcolor: #f8f8f8;
   --waline-disable-color: #000;
   --waline-code-bgcolor: #282c34;
@@ -3034,7 +3034,7 @@ code {
 .wl-editor,
 .wl-input {
   max-width: 100%;
-  border-left: 1px solid;
+  border: none;
   color: var(--waline-color);
   outline: none;
   transition: all 0.25s ease;

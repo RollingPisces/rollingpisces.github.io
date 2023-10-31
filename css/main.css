@@ -2740,7 +2740,7 @@ code {
   --waline-bgcolor: #fff;
   --waline-bgcolor-light: #f8f8f8;
   --waline-bgcolor-hover: #f0f0f0;
-  --waline-border-color: #8894f3;
+  --waline-border-color: #9078f8;
   --waline-disable-bgcolor: #f8f8f8;
   --waline-disable-color: #000;
   --waline-code-bgcolor: #282c34;
@@ -3344,9 +3344,10 @@ code {
 .wl-card .wl-head .wl-nick {
   position: relative;
   display: inline-block;
+  margin-inline-end: 0.5em;
   font-weight: bold;
   font-size: 1em;
-  font-weight: bold;
+  line-height: 1;
   text-decoration: none;
 }
 .wl-card span.wl-nick {

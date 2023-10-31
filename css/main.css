@@ -2630,9 +2630,6 @@ code {
 .busuanzi-count {
   color: #000;
 }
-.footer {
-  margin-top: 5em;
-}
 .novelContent {
   text-indent: 2em;
   font-size: 1.1rem;
@@ -2848,6 +2845,9 @@ code {
   display: inline-block;
   vertical-align: middle;
   margin-top: -2px;
+}
+.comments {
+  margin-bottom: 5em;
 }
 .wl-btn {
   display: inline-block;

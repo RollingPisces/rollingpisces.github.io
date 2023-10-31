@@ -2988,6 +2988,7 @@ code {
   width: 0;
   padding: 0.5em;
   background: rgba(0,0,0,0);
+  outline: var(--waline-border-color) ridge 1px;
   font-size: 1em;
   font-weight: bold;
   resize: none;
@@ -3028,6 +3029,7 @@ code {
   margin: 0.75em 0.5em;
   border-radius: 0.5em;
   background: rgba(0,0,0,0);
+  outline: none;
   font-size: 0.875em;
   resize: vertical;
 }
@@ -3036,7 +3038,6 @@ code {
   max-width: calc(100% - 1.75em);
   border: none;
   color: var(--waline-color);
-  outline: var(--waline-border-color) ridge 1px;
   transition: all 0.25s ease;
 }
 .wl-editor:focus,

@@ -2747,7 +2747,7 @@ code {
   --waline-bq-color: #f0f0f0;
   --waline-avatar-size: 3.25rem;
   --waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
-  --waline-badge-color: #a794f4;
+  --waline-badge-color: #3498db;
   --waline-badge-font-size: 0.75em;
   --waline-info-bgcolor: #f8f8f8;
   --waline-info-color: #999;
@@ -3028,7 +3028,6 @@ code {
   margin: 0.75em 0.5em;
   border-radius: 0.5em;
   background: rgba(0,0,0,0);
-  outline: none;
   font-size: 0.875em;
   resize: vertical;
 }
@@ -3036,6 +3035,7 @@ code {
 .wl-input {
   max-width: calc(100% - 1.75em);
   border: none;
+  outline: none;
   color: var(--waline-color);
   transition: all 0.25s ease;
 }

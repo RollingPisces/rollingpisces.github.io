@@ -2953,6 +2953,7 @@ code {
   display: block;
   color: var(--waline-theme-color);
   font-size: 0.75em;
+  border: none;
   word-break: break-all;
 }
 .wl-panel {
@@ -3487,7 +3488,7 @@ code {
   --avatar-size: var(--waline-m-avatar-size);
 }
 .wl-close-icon {
-  color: var(--waline-border-color);
+  color: var(--waline-white);
 }
 .wl-content .vemoji,
 .wl-content .wl-emoji {

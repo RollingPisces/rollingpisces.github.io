@@ -2847,7 +2847,7 @@ code {
   margin-top: -2px;
 }
 .comments {
-  padding-bottom: 9em;
+  padding-bottom: 9.5em;
 }
 .wl-btn {
   display: inline-block;
@@ -3283,7 +3283,7 @@ code {
 .wl-gallery {
   display: flex;
   overflow-y: auto;
-  max-height: 9.5em;
+  max-height: 9em;
 }
 .wl-gallery-column {
   display: flex;

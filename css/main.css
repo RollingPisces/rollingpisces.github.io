@@ -3028,9 +3028,9 @@ code {
 }
 .wl-editor {
   position: relative;
-  width: calc(100% - 1em);
+  width: 100%;
   min-height: 8.75em;
-  margin: 0.75em 0.5em;
+  margin: 0.5em;
   border-radius: 0.5em;
   border: none;
   background: rgba(0,0,0,0);
@@ -3042,7 +3042,6 @@ code {
   max-width: calc(100% - 1.25em);
   outline: none;
   color: var(--waline-color);
-  transition: all 0.25s ease;
 }
 .wl-editor:focus,
 .wl-input:focus {

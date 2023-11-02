@@ -3046,7 +3046,7 @@ code {
 }
 .wl-editor:focus,
 .wl-input:focus {
-  background: var(--waline-bgcolor-light);
+  background: none;
 }
 .wl-preview {
   padding: 0 0.5em 0.5em;

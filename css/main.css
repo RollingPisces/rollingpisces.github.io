@@ -3039,7 +3039,7 @@ code {
 }
 .wl-editor,
 .wl-input {
-  max-width: calc(100% - 1.75em);
+  max-width: calc(100% - 1.25em);
   outline: none;
   color: var(--waline-color);
   transition: all 0.25s ease;

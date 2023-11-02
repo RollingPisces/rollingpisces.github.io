@@ -3283,7 +3283,7 @@ code {
 .wl-gallery {
   display: flex;
   overflow-y: auto;
-  max-height: 80vh;
+  max-height: 9.5em;
 }
 .wl-gallery-column {
   display: flex;

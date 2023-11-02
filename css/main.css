@@ -2847,6 +2847,8 @@ code {
   margin-top: -2px;
 }
 .comments {
+  padding-left: 2.8em;
+  padding-right: 2.8em;
   padding-bottom: 9.5em;
 }
 .wl-btn {

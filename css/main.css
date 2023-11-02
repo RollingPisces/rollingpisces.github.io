@@ -3034,7 +3034,7 @@ code {
   border-radius: 0.5em;
   border: none;
   background: rgba(0,0,0,0);
-  font-size: 0.875em;
+  font-size: 1em;
   resize: vertical;
 }
 .wl-editor,
@@ -3042,6 +3042,7 @@ code {
   max-width: calc(100% - 1.25em);
   outline: none;
   color: var(--waline-color);
+  transition: all 0.25s ease;
 }
 .wl-editor:focus,
 .wl-input:focus {
